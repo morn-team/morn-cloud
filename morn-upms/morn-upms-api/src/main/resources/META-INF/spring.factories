@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  site.morn.cloud.admin.api.feign.fallback.RemoteUserServiceFallbackImpl,\
+  site.morn.cloud.admin.api.feign.fallback.RemoteLogServiceFallbackImpl,\
+  site.morn.cloud.admin.api.feign.fallback.RemoteTokenServiceFallbackImpl,\
+  site.morn.cloud.admin.api.feign.factory.RemoteUserServiceFallbackFactory,\
+  site.morn.cloud.admin.api.feign.factory.RemoteLogServiceFallbackFactory,\
+  site.morn.cloud.admin.api.feign.factory.RemoteTokenServiceFallbackFactory

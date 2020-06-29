@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  site.morn.cloud.common.security.service.PigUserDetailsServiceImpl,\
+  site.morn.cloud.common.security.component.PigSecurityInnerAspect
+

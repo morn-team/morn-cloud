@@ -1,0 +1,74 @@
+version: '2'
+services:
+  morn-mysql:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: morn-mysql
+    image: morn-mysql
+    ports:
+      - 3306:3306
+
+  morn-redis:
+    image: redis:5.0
+    ports:
+      - 6379:6379
+    restart: always
+    container_name: morn-redis
+    hostname: morn-redis
+
+  morn-discovery:
+    build:
+      context: ./morn-discovery
+    restart: always
+    ports:
+      - 8848:8848
+    container_name: morn-discovery
+    hostname: morn-discovery
+    image: morn-discovery
+
+  morn-gateway:
+    build:
+      context: ./morn-gateway
+    restart: always
+    ports:
+      - 9999:9999
+    container_name: morn-gateway
+    hostname: morn-gateway
+    image: morn-gateway
+
+  morn-auth:
+    build:
+      context: ./morn-auth
+    restart: always
+    container_name: morn-auth
+    hostname: morn-auth
+    image: morn-auth
+
+  morn-upms:
+    build:
+      context: ./morn-upms/morn-upms-biz
+    restart: always
+    container_name: morn-upms
+    hostname: morn-upms
+    image: morn-upms
+
+  morn-monitor:
+    build:
+      context: ./morn-monitor
+    restart: always
+    ports:
+      - 5001:5001
+    container_name: morn-monitor
+    hostname: morn-monitor
+    image: morn-monitor
+
+  morn-codegen:
+    build:
+      context: ./morn-codegen
+    restart: always
+    container_name: morn-codegen
+    hostname: morn-codegen
+    image: morn-codegen

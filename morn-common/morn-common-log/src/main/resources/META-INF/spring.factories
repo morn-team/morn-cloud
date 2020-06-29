@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    site.morn.cloud.common.log.LogAutoConfiguration
+org.springframework.context.ApplicationContextInitializer=\
+    site.morn.cloud.common.log.init.ApplicationLoggerInitializer

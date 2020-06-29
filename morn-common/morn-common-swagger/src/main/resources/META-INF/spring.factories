@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    site.morn.cloud.common.swagger.SwaggerAutoConfiguration
